@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.1525
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Covid19-Cases", "Covid19-Cases\Covid19-Cases.csproj", "{BBC8ED34-DB6B-4CCC-B75B-3C63E7019284}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Covid19-Cases.Tests", "Covid19-Cases.Tests\Covid19-Cases.Tests.csproj", "{8CA203BF-E0B3-47F7-AB91-BE70BACF3F66}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BBC8ED34-DB6B-4CCC-B75B-3C63E7019284}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BBC8ED34-DB6B-4CCC-B75B-3C63E7019284}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BBC8ED34-DB6B-4CCC-B75B-3C63E7019284}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BBC8ED34-DB6B-4CCC-B75B-3C63E7019284}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8CA203BF-E0B3-47F7-AB91-BE70BACF3F66}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8CA203BF-E0B3-47F7-AB91-BE70BACF3F66}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8CA203BF-E0B3-47F7-AB91-BE70BACF3F66}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8CA203BF-E0B3-47F7-AB91-BE70BACF3F66}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {981AD7ED-17B2-4395-B849-53230C4DF971}
+	EndGlobalSection
+EndGlobal
