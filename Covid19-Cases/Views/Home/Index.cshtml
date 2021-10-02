@@ -6,17 +6,17 @@
             </select>
         </div>
         <div class="col-2">
-            <button class="btn btn-outline-primary">Report</button>
+            <button class="btn btn-outline-primary" name="btnReport" id="=btnReport">Report</button>
         </div>
         <div class="col-3">
             <div class="btn-group" role="group" aria-label="Basic outlined example">
-                <button type="button" class="btn btn-outline-primary">XML</button>
-                <button type="button" class="btn btn-outline-primary">JSON</button>
-                <button type="button" class="btn btn-outline-primary">CSV</button>
+                <button type="button" class="btn btn-outline-primary" name="btn-format-xml" id="btn-xml">XML</button>
+                <button type="button" class="btn btn-outline-primary" name="btn-format-json" id="btn-json">JSON</button>
+                <button type="button" class="btn btn-outline-primary" name="btn-format-csv" id="btn-csv">CSV</button>
             </div>
         </div>
     </div>
-    <table class="table table-striped">
+    <table class="table table-sm table-hover">
         <thead>
             <tr>
                 <th>Region</th>
@@ -26,9 +26,19 @@
         </thead>
         <tbody>
             <tr>
-                <th></th>
-                <th></th>
-                <th></th>
+                <td>REGION_NAME</td>
+                <td>TOTAL_CASES</td>
+                <td>TOTAL_DEATHS</td>
+            </tr>
+            <tr>
+                <td>REGION_NAME</td>
+                <td>TOTAL_CASES</td>
+                <td>TOTAL_DEATHS</td>
+            </tr>
+            <tr>
+                <td>REGION_NAME</td>
+                <td>TOTAL_CASES</td>
+                <td>TOTAL_DEATHS</td>
             </tr>
         </tbody>
     </table>
