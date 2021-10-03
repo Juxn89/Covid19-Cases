@@ -1,8 +1,17 @@
-﻿<div class="row">
+﻿@model Covid19_Cases.DTO.CovidCasesDto
+
+
+<div class="row">
     <div class="row mt-2">
         <div class="col-2">
             <select class="form-select" aria-label="Default select example">
-                <option selected >Region</option>
+                <option selected>Region</option>
+                @{ 
+                    foreach (var item in Model.lstRegion)
+                    {
+                        <option value="@item.iso">@item.name</option>
+                    }
+                }
             </select>
         </div>
         <div class="col-2">
@@ -19,27 +28,22 @@
     <table class="table table-sm table-hover">
         <thead>
             <tr>
-                <th>Region</th>
+                @{ if (Model.isFilter) { <th>Province</th> } else { <th>Region</th> } }
                 <th>Cases</th>
                 <th>Deaths</th>
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>REGION_NAME</td>
-                <td>TOTAL_CASES</td>
-                <td>TOTAL_DEATHS</td>
-            </tr>
-            <tr>
-                <td>REGION_NAME</td>
-                <td>TOTAL_CASES</td>
-                <td>TOTAL_DEATHS</td>
-            </tr>
-            <tr>
-                <td>REGION_NAME</td>
-                <td>TOTAL_CASES</td>
-                <td>TOTAL_DEATHS</td>
-            </tr>
+            @{
+                foreach (var item in Model.lstDetail)
+                {
+                    <tr>
+                        <td>@item.region.name</td>
+                        <td>@item.confirmed.ToString("N0")</td>
+                        <td>@item.deaths.ToString("N0")</td>
+                    </tr>
+                }
+            }
         </tbody>
     </table>
 </div>

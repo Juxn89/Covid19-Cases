@@ -18,11 +18,11 @@ namespace Covid19_Cases.Constans
         /// <summary>
         /// Region's endpoint
         /// </summary>
-        public static readonly string REGION_ENDPOINT = $"{BASE_URL}/reports?region_name=";
+        public static readonly string REGION_ENDPOINT = $"{BASE_URL}/regions";
 
         /// <summary>
         /// Report's endpoint
         /// </summary>
-        public static readonly string REPORT_ENDPOINT = $"{BASE_URL}/reports?region_name=";
+        public static readonly string REPORT_ENDPOINT = $"{BASE_URL}/reports";
     }
 }

@@ -10,6 +10,10 @@ namespace Covid19_Cases.DTO
     /// </summary>
     public class RegionDto
     {
+        public List<DataDto> data { get; set; }
+    }
+
+    public class DataDto {
         /// <summary>
         /// Region's ISO
         /// </summary>

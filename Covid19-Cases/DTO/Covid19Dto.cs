@@ -10,6 +10,10 @@ namespace Covid19_Cases.DTO
     /// </summary>
     public class Covid19Dto
     {
+        public List<DataReportDto> data { get; set; }
+    }
+
+    public class DataReportDto {
         /// <summary>
         /// Total of region's death
         /// </summary>
@@ -23,6 +27,6 @@ namespace Covid19_Cases.DTO
         /// <summary>
         /// Region's name
         /// </summary>
-        public string province { get; set; }
+        public DataDto region { get; set; }
     }
 }
