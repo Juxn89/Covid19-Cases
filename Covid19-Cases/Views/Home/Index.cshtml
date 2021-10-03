@@ -1,49 +1,56 @@
 ﻿@model Covid19_Cases.DTO.CovidCasesDto
+@{
+    ViewBag.Title = "Covid-19 Cases";
+}
 
 
-<div class="row">
-    <div class="row mt-2">
-        <div class="col-2">
-            <select class="form-select" aria-label="Default select example">
-                <option selected>Region</option>
-                @{ 
-                    foreach (var item in Model.lstRegion)
+    <div class="row">
+        <div class="row mt-2">
+            @using (Html.BeginForm("Index", "Home", FormMethod.Get))
+            {
+            <span>Algo:@Model.region</span>
+                <div class="row">
+                    <div class="col-2">
+                        @Html.DropDownListFor(m => m.region, Model.lstRegion, "Region", new { @class = "form-select" })
+                    </div>
+                    <div class="col-2">
+                        <button class="btn btn-outline-primary" type="submit">Report</button>
+                    </div>
+                    <div class="col-3">
+                        <div class="btn-group" role="group" aria-label="Basic outlined example">
+                            @Html.ActionLink("XML", "Download", new { typeFile = 1, region = Model.region }, new { @class = "btn btn-outline-primary" })
+                            @Html.ActionLink("JSON", "Download", new { typeFile = 2, region = Model.region }, new { @class = "btn btn-outline-primary" })
+                            @Html.ActionLink("CSV", "Download", new { typeFile = 3, region = Model.region }, new { @class = "btn btn-outline-primary" })
+                        </div>
+                    </div>
+                </div>
+             }
+            </div>            
+        <table id="Productresult" class="table table-sm table-hover">
+            <thead>
+                <tr>
+                    @{ if (Model.isFilter)
+                        {
+                            <th>Province</th> }
+                        else
+                        {
+                            <th>Region</th> } }
+                    <th>Cases</th>
+                    <th>Deaths</th>
+                </tr>
+            </thead>
+            <tbody>
+                @{
+                    foreach (var item in Model.lstDetail)
                     {
-                        <option value="@item.iso">@item.name</option>
+                        <tr>
+                            @{ if (Model.isFilter) { <td>@item.region.province</td> } else { <td>@item.region.name</td> } }
+                            <td>@item.confirmed.ToString("N0")</td>
+                            <td>@item.deaths.ToString("N0")</td>
+                        </tr>
                     }
                 }
-            </select>
-        </div>
-        <div class="col-2">
-            <button class="btn btn-outline-primary" name="btnReport" id="=btnReport">Report</button>
-        </div>
-        <div class="col-3">
-            <div class="btn-group" role="group" aria-label="Basic outlined example">
-                <button type="button" class="btn btn-outline-primary" name="btn-format-xml" id="btn-xml">XML</button>
-                <button type="button" class="btn btn-outline-primary" name="btn-format-json" id="btn-json">JSON</button>
-                <button type="button" class="btn btn-outline-primary" name="btn-format-csv" id="btn-csv">CSV</button>
-            </div>
-        </div>
+            </tbody>
+        </table>
     </div>
-    <table class="table table-sm table-hover">
-        <thead>
-            <tr>
-                @{ if (Model.isFilter) { <th>Province</th> } else { <th>Region</th> } }
-                <th>Cases</th>
-                <th>Deaths</th>
-            </tr>
-        </thead>
-        <tbody>
-            @{
-                foreach (var item in Model.lstDetail)
-                {
-                    <tr>
-                        <td>@item.region.name</td>
-                        <td>@item.confirmed.ToString("N0")</td>
-                        <td>@item.deaths.ToString("N0")</td>
-                    </tr>
-                }
-            }
-        </tbody>
-    </table>
-</div>
+

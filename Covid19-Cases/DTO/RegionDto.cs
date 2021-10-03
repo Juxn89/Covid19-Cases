@@ -23,5 +23,7 @@ namespace Covid19_Cases.DTO
         /// Regions's name
         /// </summary>
         public string name { get; set; }
+
+        public string province { get; set; }
     }
 }
