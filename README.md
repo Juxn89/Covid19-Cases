@@ -7,9 +7,9 @@ If the user selects some region and press the Report button, tthe grid will disp
 
 Export data to: XML, JSON and CSV file with the current top 10.
 
-[Live]("2>La aplicación web se publicó correctamente http://covid19-cases.azurewebsites.net/")
+In the follow link is the [Live Demo]("http://covid19-cases.azurewebsites.net/") plublished on Microsoft Azure.
 
-Covid-19 API: []("https://rapidapi.com/axisbits-axisbits-default/api/covid-19-statistics")
+API: [Covid-19 API]("https://rapidapi.com/axisbits-axisbits-default/api/covid-19-statistics")
 
 ### Technologies
 - Visual Studio 2017
