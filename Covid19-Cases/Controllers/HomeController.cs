@@ -11,13 +11,13 @@ namespace Covid19_Cases.Controllers
 {
     public class HomeController : Controller
     {
-        private Coviv19Repository _CovidReporistory;
+        private Covid19Repository _CovidReporistory;
         private FileRopository _fileRepository;
 
         public HomeController()
         {
             _fileRepository = new FileRopository();
-            _CovidReporistory = new Coviv19Repository();
+            _CovidReporistory = new Covid19Repository();
         }
 
         [HttpGet]

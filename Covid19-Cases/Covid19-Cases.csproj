@@ -158,7 +158,6 @@
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Constans\Constans.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="DTO\Covid19Dto.cs" />
     <Compile Include="DTO\CovidCasesDto.cs" />
     <Compile Include="DTO\FilesDto.cs" />
@@ -169,7 +168,7 @@
     </Compile>
     <Compile Include="Helpers\HTMLHelpers.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Repositories\Coviv19Repository.cs" />
+    <Compile Include="Repositories\Covid19Repository.cs" />
     <Compile Include="Repositories\FileRopository.cs" />
   </ItemGroup>
   <ItemGroup>

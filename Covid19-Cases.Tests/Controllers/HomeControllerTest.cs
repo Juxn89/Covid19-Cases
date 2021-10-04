@@ -2,6 +2,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Covid19_Cases;
 using Covid19_Cases.Controllers;
+using System.Threading.Tasks;
 
 namespace Covid19_Cases.Tests.Controllers
 {
@@ -11,15 +12,14 @@ namespace Covid19_Cases.Tests.Controllers
         [TestMethod]
         public void Index()
         {
-            // Disponer
-            HomeController controller = new HomeController();
+            string region = null;
 
-            // Actuar
-            ViewResult result = controller.Index() as ViewResult;
+            HomeController controller = new HomeController();                        
+            Task<ActionResult> result = controller.Index(region) as  Task<ActionResult>;
 
-            // Declarar
+            var viewResult = result.Result;
+            
             Assert.IsNotNull(result);
-            Assert.AreEqual("Home Page", result.ViewBag.Title);
         }
     }
 }

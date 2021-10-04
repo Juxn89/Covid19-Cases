@@ -17,12 +17,12 @@ using static Covid19_Cases.Emuns.Enums;
 
 namespace Covid19_Cases.Repositories
 {
-    public class Coviv19Repository
+    public class Covid19Repository
     {
         /// <summary>
         /// Constructor
         /// </summary>
-        public Coviv19Repository()
+        public Covid19Repository()
         {
 
         }
